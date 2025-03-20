@@ -1,0 +1,18 @@
+{% extends 'cakeshop/base.html' %}
+{% load static %}
+
+{% block title %}{{ cake.name }} - Bakery Shop{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <img src="{{ cake.image.url }}" class="img-fluid rounded" alt="{{ cake.name }}">
+    </div>
+    <div class="col-md-6">
+        <h1>{{ cake.name }}</h1>
+        <p>{{ cake.description }}</p>
+        <h3 class="text-danger">{{ cake.price }}$</h3>
+        <button class="btn btn-success">Thêm vào giỏ hàng</button>
+    </div>
+</div>
+{% endblock %}
