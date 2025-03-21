@@ -1,7 +1,7 @@
 .banner {
     background: url('/static/images/banhkem1.jpg') no-repeat center center;
     background-size: cover;
-    height: 100vh;  /* Chiều cao bằng toàn bộ màn hình */
+    height: 50vh;  /* Chiều cao bằng toàn bộ màn hình */
     width: 100vw;   /* Chiều rộng bằng toàn bộ màn hình */
     display: flex;
     align-items: center;
