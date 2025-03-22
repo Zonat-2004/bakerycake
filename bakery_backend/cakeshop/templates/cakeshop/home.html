@@ -17,14 +17,15 @@
     {% for cake in cakes %}
     <div class="col-md-4 mb-4">
         <div class="card">
-            <img src="{{ cake.image.url }}" class="card-img-top" alt="{{ cake.name }}">
+            <img src="{{ cake.image }}" class="card-img-top" alt="{{ cake.name }}">
             <div class="card-body">
                 <h5 class="card-title">{{ cake.name }}</h5>
                 <p class="card-text">Giá: {{ cake.price }}$</p>
-                <a href="{% url 'cake_detail' cake.id %}" class="btn btn-primary">Xem Chi Tiết</a>
+                <a href="#" class="btn btn-primary">Xem Chi Tiết</a>
             </div>
         </div>
     </div>
     {% endfor %}
-</div> {% endcomment %}
+</div>
+ {% endcomment %}
 {% endblock %}

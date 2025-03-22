@@ -77,8 +77,11 @@ WSGI_APPLICATION = 'bakery.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'QuanLyWebBanBanh',  # Thay bằng tên database của bạn
+        'CLIENT': {
+            'host': 'mongodb://localhost:27017/',  # URL kết nối MongoDB
+        }
     }
 }
 
