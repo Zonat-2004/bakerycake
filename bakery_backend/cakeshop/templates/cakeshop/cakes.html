@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách bánh</title>
+</head>
+<body>
+    <h1>Danh sách bánh</h1>
+    <ul>
+        {% for cake in cakes %}
+            <li>
+                <h2>{{ cake.name }}</h2>
+                <p>Mô tả: {{ cake.description }}</p>
+                <p>Giá: {{ cake.price }}</p>
+                <p>Danh mục: {{ cake.category_id }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
