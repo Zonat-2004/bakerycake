@@ -22,12 +22,15 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+    
+            <!-- Thanh tìm kiếm căn giữa -->
             <div class="search-container">
-                <form action="/search" method="get">
-                <input type="text" placeholder="Tìm kiếm bánh..." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <form action="/search" method="get" class="d-flex">
+                    <input type="text" placeholder="Tìm kiếm bánh..." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
-            </div>
+            </div>            
+    
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link text-white" href="#">Trang chủ</a></li>
@@ -38,6 +41,7 @@
             </div>
         </div>
     </nav>
+    
     
 
     <!-- Nội dung chính -->
