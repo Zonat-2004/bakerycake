@@ -1,5 +1,5 @@
 .banner {
-    background: url('/static/images/banhkem1.jpg') no-repeat center center;
+    /* background: url('/static/images/banhkem1.jpg') no-repeat center center; */
     background-size: cover;
     height: 50vh;
     /* Chiều cao bằng toàn bộ màn hình */
