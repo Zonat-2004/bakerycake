@@ -13,7 +13,10 @@ def cake_list(request):
 
     # Chuyển ObjectId thành string (nếu có)
     for cake in cakes:
+        if "image" in cake and not cake["image"].startswith(settings.MEDIA_URL):
+            cake["image"] = settings.MEDIA_URL + cake["image"]  # Dùng settings.MEDIA_URL
         cake["_id"] = str(cake["_id"])
+        
     
     return render(request, 'cakes.html', {'cakes': cakes, 'categories': categories})
 

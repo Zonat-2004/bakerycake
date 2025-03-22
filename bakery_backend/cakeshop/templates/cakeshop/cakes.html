@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh sách bánh</title>
-</head>
-<body>
+{% extends 'cakeshop/layout.html' %}
+{% load static %}
+
+{% block title %}Trang Chủ - Bakery Shop{% endblock %}
+
+{% block content %}
     <h1>Danh sách bánh</h1>
     <ul>
         {% for cake in cakes %}
@@ -16,6 +14,4 @@
                 <p>Danh mục: {{ cake.category_id }}</p>
             </li>
         {% endfor %}
-    </ul>
-</body>
-</html>
+{% endblock %}
