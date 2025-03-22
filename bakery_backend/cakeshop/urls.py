@@ -10,6 +10,4 @@ urlpatterns = [
     path('', home, name='home'),
     path('cakes/<int:cake_id>/', cake_detail, name='cake_detail'),
     path('cakes/', cake_list, name='cake_list')
-] 
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
