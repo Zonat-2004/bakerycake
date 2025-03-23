@@ -67,6 +67,7 @@
     transform: translateX(-50%);
     display: flex;
     align-items: center;
+    margin-left: -40px; /* Dịch sang trái một chút */
 }
 
 /* Ô nhập */
@@ -112,3 +113,30 @@
 .back-button:hover {
     background-color: #e05599;
 }
+
+/* Đảm bảo carousel chiếm toàn bộ chiều ngang */
+#bannerCarousel {
+    width: 100%;
+    margin-top: 20px; /* Tạo khoảng cách so với thanh menu trên */
+}
+
+/* Căn chỉnh chiều cao, cắt ảnh theo chiều rộng khung */
+.carousel-inner img {
+    width: 100%;
+    height: 500px;         /* Đặt chiều cao cố định (tùy chỉnh) */
+    object-fit: cover;     /* Cắt ảnh cho vừa khung mà không méo hình */
+    object-position: 50% 50%; /* Canh giữa ảnh */
+}
+
+/* Tăng độ hiển thị cho nút điều hướng */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+/* Nếu muốn nút điều hướng to hơn một chút */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
