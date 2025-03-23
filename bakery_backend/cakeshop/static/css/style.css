@@ -1,5 +1,5 @@
 .banner {
-    background: url('/static/images/banhkem1.jpg') no-repeat center center;
+    /* background: url('/static/images/banhkem1.jpg') no-repeat center center; */
     background-size: cover;
     height: 50vh;
     /* Chiều cao bằng toàn bộ màn hình */
@@ -47,7 +47,7 @@
 }
 
 .banner p {
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: white;
 }
 
@@ -114,29 +114,38 @@
     background-color: #e05599;
 }
 
-/* Đảm bảo carousel chiếm toàn bộ chiều ngang */
-#bannerCarousel {
-    width: 100%;
-    margin-top: 20px; /* Tạo khoảng cách so với thanh menu trên */
-}
-
-/* Căn chỉnh chiều cao, cắt ảnh theo chiều rộng khung */
 .carousel-inner img {
     width: 100%;
-    height: 500px;         /* Đặt chiều cao cố định (tùy chỉnh) */
-    object-fit: cover;     /* Cắt ảnh cho vừa khung mà không méo hình */
-    object-position: 50% 50%; /* Canh giữa ảnh */
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
 }
 
-/* Tăng độ hiển thị cho nút điều hướng */
+/* Overlay text nằm ở giữa banner */
+.banner-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Hoặc tuỳ màu chữ */
+    text-align: center;
+    /* Thêm hiệu ứng bóng chữ để nổi hơn */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    z-index: 1; /* Nội dung overlay nằm trên pseudo-element */
+}
+
+.banner-overlay h1 {
+    color: #ff6699;
+}
+.banner-overlay p {
+    color: #ff6699;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.banner-overlay a {
+    color: #000;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(100%);
 }
-
-/* Nếu muốn nút điều hướng to hơn một chút */
-.carousel-control-prev,
-.carousel-control-next {
-    width: 5%;
-}
-
