@@ -26,6 +26,8 @@ body {
     width: 420px;
     text-align: center;
     border: 6px solid #ff66b2;
+    transform: scale(0.9); /* Giảm kích thước xuống 90% */
+    transform-origin: center; /* Căn chỉnh thu nhỏ từ trung tâm */
 }
 
 /* Tiêu đề */
@@ -153,6 +155,7 @@ p a:hover {
             <button type="submit">ĐĂNG KÝ</button>
         </form>
         <p>Bạn đã có tài khoản? <a href="{% url 'login' %}">Đăng nhập</a></p>
+        <a href="/" class="back-button">⬅ Quay lại</a>
     </div>
 </body>
 </html>

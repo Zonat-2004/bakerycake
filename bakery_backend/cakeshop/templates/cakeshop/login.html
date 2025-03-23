@@ -3,94 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">  
     <title>Đăng nhập</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #ff52c0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        
-        .login-container {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            width: 350px;
-            text-align: center;
-        }
-        
-        h2 {
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-        }
-        
-        .input-group {
-            margin: 15px 0;
-            text-align: left;
-        }
-        
-        .input-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .input-group input {
-            width: 100%;
-            padding: 10px;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            background-color: #f8f8f8;
-            font-size: 16px;
-        }
-        
-        .btn {
-            width: 105%;
-            background-color: #ff52c0;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 20px;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        
-        .btn:hover {
-            background-color: #ff3399;
-        }
-        
-        .register-link {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-        
-        .register-link a {
-            font-weight: bold;
-            color: black;
-            text-decoration: none;
-        }
-        
-        .forgot-password {
-            color: red;
-            font-size: 14px;
-            margin-top: 10px;
-            display: block;
-            text-decoration: none;
-        }
-        
-        .quaylai {
-            color: red;
-            font-size: 14px;
-            margin-top: 10px;
-            display: block;
-            text-decoration: none;
-        }
+    font-family: Arial, sans-serif;
+    background-color: #ff52c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    display: block;
+    margin: auto;
+}
+
+.btn {
+    width: 100%;
+    background-color: #ff52c0;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #ff3399;
+}
+
+.register-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.register-link a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.forgot-password {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+/* .back-button {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    text-decoration: none;
+} */
+
     </style>
 </head>
 <body>
@@ -122,6 +129,7 @@
         Bạn chưa có tài khoản? <a href="{% url 'register' %}">Đăng ký ngay</a>
     </div>
     <a href="#" class="forgot-password">Quên mật khẩu</a>
+    <a href="/" class="back-button">⬅ Quay lại</a>
 </div>
     </div>
 </body>
