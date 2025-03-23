@@ -28,6 +28,18 @@ def home(request):
         cake["_id"] = str(cake["_id"])
 
     return render(request, 'cakeshop/home.html', {'cakes': cakes})
+def custom_login(request):
+    if request.method == "POST":
+        phone = request.POST["phone"]
+        password = request.POST["password"]
+        user = authenticate(request, username=phone, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect("home")  # Chuyển hướng sau khi đăng nhập thành công
+        else:
+            messages.error(request, "Số điện thoại hoặc mật khẩu không đúng!")
+
+    return render(request, "cakeshop/login.html")
 
 
 def cake_detail(request, cake_id):

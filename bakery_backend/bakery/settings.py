@@ -133,3 +133,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'cakeshop/static')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MONGO_URI = "mongodb://localhost:27017/"  # Thay bằng URL của MongoDB nếu cần
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
