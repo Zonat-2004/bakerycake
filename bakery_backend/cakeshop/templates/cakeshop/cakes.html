@@ -5,13 +5,5 @@
 
 {% block content %}
     <h1>Danh sách bánh</h1>
-    <ul>
-        {% for cake in cakes %}
-            <li>
-                <h2>{{ cake.name }}</h2>
-                <p>Mô tả: {{ cake.description }}</p>
-                <p>Giá: {{ cake.price }}</p>
-                <p>Danh mục: {{ cake.category_id }}</p>
-            </li>
-        {% endfor %}
+    {% include 'cakeshop/cake_list.html' %}
 {% endblock %}
