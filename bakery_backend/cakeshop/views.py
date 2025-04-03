@@ -9,6 +9,7 @@ from django.contrib.auth import authenticate, login
 from .forms import UserRegistrationForm
 from django.conf import settings
 from .models import cakes_collection, categories_collection  # Import collection từ models
+
 client = MongoClient('mongodb://localhost:27017/')  # Your MongoDB connection string
 db = client.QuanLyWebBanhKem  # Your MongoDB database name
 
@@ -16,21 +17,25 @@ def cake_list(request):
     cakes = list(cakes_collection.find())  # Lấy danh sách bánh từ MongoDB
     categories = list(categories_collection.find())  # Lấy danh sách categories
 
-    # Chuyển ObjectId thành string (nếu có)
+    # Chuyển ObjectId thành string và xử lý đường dẫn hình ảnh
     for cake in cakes:
-        if "image" in cake and not cake["image"].startswith(settings.MEDIA_URL):
-            cake["image"] = settings.MEDIA_URL + cake["image"]  # Dùng settings.MEDIA_URL
         cake["_id"] = str(cake["_id"])
-        
-    
-    return render(request, 'cakes.html', {'cakes': cakes, 'categories': categories})
+        if "image" in cake:
+            # Đảm bảo đường dẫn hình ảnh bắt đầu bằng MEDIA_URL
+            if not cake["image"].startswith(settings.MEDIA_URL):
+                cake["image"] = f"{settings.MEDIA_URL}{cake['image']}"
+
+    return render(request, 'cakeshop/cakes.html', {'cakes': cakes, 'categories': categories})
 
 def home(request):
     cakes = list(cakes_collection.find())  # Lấy danh sách bánh từ MongoDB
 
-    # Chuyển ObjectId thành string (vì Django không hiển thị ObjectId được)
+    # Chuyển ObjectId thành string và xử lý đường dẫn hình ảnh
     for cake in cakes:
         cake["_id"] = str(cake["_id"])
+        if "image" in cake:
+            if not cake["image"].startswith(settings.MEDIA_URL):
+                cake["image"] = f"{settings.MEDIA_URL}{cake['image']}"
 
     return render(request, 'cakeshop/home.html', {'cakes': cakes})
 def custom_login(request):

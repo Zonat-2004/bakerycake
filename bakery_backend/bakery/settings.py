@@ -125,8 +125,8 @@ import os
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'cakeshop/static')]
 
-MEDIA_URL = 'media/'
-MEDIA_ROOT = [os.path.join(BASE_DIR, 'cakeshop/media')]
+MEDIA_URL = 'media/cakes/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'cakeshop/media/cakes')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

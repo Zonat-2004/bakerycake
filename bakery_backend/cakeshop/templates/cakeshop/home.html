@@ -33,26 +33,16 @@
         <p class="lead">Chào mừng tới trang web</p>
         <a href="/cakeshop/cakes" class="btn btn-light btn-lg">ĐẶT BÁNH NGAY</a>
     </div>
-  </section>
-  
+</section>
+
 <br>
 
-<!-- Danh sách bánh kem -->
-<div class="row mt-4">
-    {% for cake in cakes %}
-    <div class="col-md-4 mb-4">
-        <div class="card">
-            <img src="{{ cakes.image.url }}" alt="{{ cake.name }}" width="200">
-            <div class="card-body">
-                <h5 class="card-title">{{ cake.name }}</h5>
-                <p class="card-text">Giá: {{ cake.price }}$</p>
-                <a href="cakes/<int:cake_id>/" class="btn btn-primary">Xem Chi Tiết</a>
-            </div>
-        </div>
-    </div>
-    {% empty %}
-    <p>Không có bánh kem nào trong cơ sở dữ liệu.</p>
-    {% endfor %}
+<!-- Danh sách bánh -->
+<div class="container">
+    <h1 class="text-center my-4">Danh sách bánh</h1>
+    {% include 'cakeshop/cake_list.html' %}
 </div>
+
+<br>
 
 {% endblock %}
