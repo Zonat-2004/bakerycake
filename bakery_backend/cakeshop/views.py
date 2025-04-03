@@ -63,3 +63,4 @@ def register(request):
         form = UserRegistrationForm()
     
     return render(request, 'cakeshop/register.html', {'form': form})
+

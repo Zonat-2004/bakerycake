@@ -149,3 +149,75 @@
 .carousel-control-next-icon {
     filter: invert(100%);
 }
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #5C3D00; /* Màu nền giống trong ảnh */
+}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #5C3D00;
+    min-width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #ff6699;
+}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #ff6699;
+    min-width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
