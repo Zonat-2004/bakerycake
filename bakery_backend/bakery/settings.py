@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'djongo',
     'rest_framework',
+    'bakery',
     'cakeshop',
     
 ]

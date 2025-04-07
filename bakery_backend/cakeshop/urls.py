@@ -6,12 +6,14 @@ from .views import cake_list
 from django.conf import settings
 from .views import custom_login
 from .views import register
+from .views import search_view
 
 
 urlpatterns = [
     path('', home, name='home'),
     path('cakes/<int:cake_id>/', cake_detail, name='cake_detail'),
     path('cakes/', cake_list, name='cake_list'),
+    path('tim-kiem/', search_view, name='search'),
     path('login/', custom_login, name='login'),
     path('register/', register, name='register')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
