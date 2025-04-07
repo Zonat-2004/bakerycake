@@ -19,3 +19,4 @@ class Cake:
         self.price = price
         self.description = description
         self.image = image
+

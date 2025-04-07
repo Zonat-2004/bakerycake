@@ -67,7 +67,8 @@
     transform: translateX(-50%);
     display: flex;
     align-items: center;
-    margin-left: -40px; /* Dịch sang trái một chút */
+    margin-left: -40px;
+    /* Dịch sang trái một chút */
 }
 
 /* Ô nhập */
@@ -127,20 +128,24 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white; /* Hoặc tuỳ màu chữ */
+    color: white;
+    /* Hoặc tuỳ màu chữ */
     text-align: center;
     /* Thêm hiệu ứng bóng chữ để nổi hơn */
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-    z-index: 1; /* Nội dung overlay nằm trên pseudo-element */
+    z-index: 1;
+    /* Nội dung overlay nằm trên pseudo-element */
 }
 
 .banner-overlay h1 {
     color: #ff6699;
 }
+
 .banner-overlay p {
     color: #ff6699;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
+
 .banner-overlay a {
     color: #000;
 }
@@ -149,11 +154,13 @@
 .carousel-control-next-icon {
     filter: invert(100%);
 }
+
 .menu {
     list-style: none;
     padding: 0;
     margin: 0;
-    background: #5C3D00; /* Màu nền giống trong ảnh */
+    background: #5C3D00;
+    /* Màu nền giống trong ảnh */
 }
 
 .menu li {
@@ -185,6 +192,7 @@
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+
 .menu {
     list-style: none;
     padding: 0;
@@ -220,4 +228,45 @@
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffe4f0;
+    /* hồng nhạt nhẹ nhàng */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Hover behavior */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffd1ec;
 }
