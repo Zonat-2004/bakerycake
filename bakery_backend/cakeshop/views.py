@@ -69,7 +69,7 @@ def register(request):
     
     return render(request, 'cakeshop/register.html', {'form': form})
 def search_view(request):
-    query = request.GET.get('q', '')
+    query = request.GET.get("q", "")
     results = []
     for cake in cakes_collection.find():
         print(cake["name"])
@@ -78,4 +78,5 @@ def search_view(request):
             "name": {"$regex": query, "$options": "i"}  # tìm không phân biệt hoa thường
         })
     return render(request, 'cakeshop/search_results.html', {'query': query, 'results': results})
+
 
