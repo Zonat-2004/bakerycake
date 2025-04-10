@@ -71,12 +71,20 @@ def register(request):
 def search_view(request):
     query = request.GET.get("q", "")
     results = []
-    for cake in cakes_collection.find():
-        print(cake["name"])
+
     if query:
-        results = cakes_collection.find({
-            "name": {"$regex": query, "$options": "i"}  # tìm không phân biệt hoa thường
+        results_cursor = cakes_collection.find({
+            "name": {"$regex": query, "$options": "i"}
         })
-    return render(request, 'cakeshop/search_results.html', {'query': query, 'results': results})
+        results = list(results_cursor)  # Chuyển cursor thành list
 
+        # Xử lý ảnh cho kết quả tìm kiếm
+        for cake in results:
+            cake["_id"] = str(cake["_id"])
+            if "image" in cake and not cake["image"].startswith(settings.MEDIA_URL):
+                cake["image"] = f"{settings.MEDIA_URL}{cake['image']}"
 
+    return render(request, 'cakeshop/search_results.html', {
+        'query': query,
+        'results': results
+    })
